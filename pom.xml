@@ -11,7 +11,7 @@
 	<groupId>es.rmarin</groupId>
 	<artifactId>demoSpringbootDocker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	
 	<name>demoSpringbootDocker</name>
 	<description>Demo project for Spring Boot</description>
@@ -22,6 +22,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -56,7 +57,12 @@
 	</dependencies>
 
 	<build>
-		<finalName>demospring</finalName>
+		<plugins>
+         <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+         </plugin>
+      </plugins>
 	</build>
 
 </project>
